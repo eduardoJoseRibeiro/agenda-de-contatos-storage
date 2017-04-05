@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Agenda de Contatos via Storage</title> <!-- Titulo da Pagina-->
+    <link rel="stylesheet" href="css/bootstrap.min.css"> <!-- Framework CSS-->
+</head>
+<body>
+    <!-- Cabeçalho-->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header"><a href="index.html" id="tituloDeNavegacao" class="navbar-brand"></a></div> <!-- Titulo adicionado dinamicamente-->
+        </div>
+    </nav>
+    <!-- Formulario -->
+    <div class="container-fluid">
+        <div class="form-inline">
+            <div class="form-group">
+                <input type="text" class="form-control" id="nome" placeholder="Nome"> <!-- Formulario de Nome -->
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control" id="email" placeholder="Email"> <!-- Formulario de Email -->
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="telefone" placeholder="Telefone"> <!-- Formulario de Telefone-->
+            </div>
+            <span id="btnUpdate" style='display:none'> <!-- Botões quando for atualizar os dados de algum item-->
+                <span id="inputIDUpdate"></span>
+                <button class="btn btn-default" onclick="salvarDados();">Salvar</button> 
+                <button class="btn btn-default" onclick="limpaFormulario();">Cancelar</button>
+            </span>
+            <span id="btnAdd"> <!-- Botões padrões-->
+                <button class="btn btn-default" id="addDados" onclick="addDados();">Adicionar</button>
+                <button class="btn btn-default" onclick="limpaFormulario();">Limpar Campos</button>
+                <!--<button class="btn btn-default" onclick="deletaLista();">Deletar Lista</button>  adicione esse botão caso queira-->
+            </span>
+            <table id="listaTabela" class="table">
+                <!-- A tabela irá ser incluida dinamicamente aqui-->
+            </table>
+        </div>
+    </div>
+    <!-- Rodape -->
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container">
+            <h4 class="text-center text-success">Total de Contatos: <span id="numeroDeContatos">0</span></h4>
+        </div>
+    </nav>
+    <!-- Scripts-->
+    <script src="js/main.js"></script>
+    <script src="js/config.js"></script>
+</body>
+</html>
